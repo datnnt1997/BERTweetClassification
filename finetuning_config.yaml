@@ -1,0 +1,17 @@
+task_name: "HateSpeech"
+train_file_path: "./dataset/HASOC/english_dataset.tsv"
+test_file_path: "./dataset/HASOC/hasoc2019_en_test.tsv"
+output_path: "./outputs"
+
+model_name: "vinai/bertweet-base"
+labels: ["NOT", "HOF"]
+train_batch_size: 32
+test_batch_size: 16
+kfold: 5
+max_length: 128
+use_gpu: True
+weight_decay: 0.0
+learning_rate: 0.00001
+num_epochs: 10
+random_state: 42
+early_stop: 2
