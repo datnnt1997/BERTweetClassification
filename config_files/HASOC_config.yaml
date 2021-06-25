@@ -1,0 +1,21 @@
+task_name: "HASOC"
+train_file_path: "./dataset/HASOC/english_dataset.tsv"
+test_file_path: "./dataset/HASOC/hasoc2019_en_test.tsv"
+output_path: "./outputs"
+text_idx: 1
+class_idx: 2
+delimiter: "\t"
+test_split: 0.0
+
+model_name: "vinai/bertweet-base"
+label_maps: {"NOT": 0, "HOF": 1}
+train_batch_size: 32
+test_batch_size: 16
+kfold: 5
+max_length: 128
+use_gpu: True
+weight_decay: 0.0
+learning_rate: 0.00001
+num_epochs: 10
+random_state: 42
+early_stop: 2
